@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <!-- Gradiente Dourado Nobre inspirado no BeautyClinic -->
+    <linearGradient id="goldBeauty" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E4D0B4" />
+      <stop offset="50%" stop-color="#C9A06C" />
+      <stop offset="100%" stop-color="#8B6A4A" />
+    </linearGradient>
+  </defs>
+
+  <!-- Moldura Quadrada Fina Externa (Sem Bordas Arredondadas) -->
+  <rect x="30" y="30" width="340" height="340" fill="none" stroke="url(#goldBeauty)" stroke-width="1" opacity="0.4" />
+  <rect x="45" y="45" width="310" height="310" fill="none" stroke="url(#goldBeauty)" stroke-width="0.75" opacity="0.6" stroke-dasharray="6 6" />
+
+  <!-- Símbolo Monograma Geométrico Elegante (ÉLÉGANCE / AUREA) -->
+  <g transform="translate(200, 160) scale(1.1)">
+    <!-- Diamante Retilíneo / Losango -->
+    <polygon points="0,-60 50,0 0,60 -50,0" fill="none" stroke="url(#goldBeauty)" stroke-width="1.5" opacity="0.85" />
+    <polygon points="0,-45 38,0 0,45 -38,0" fill="none" stroke="url(#goldBeauty)" stroke-width="0.75" opacity="0.5" />
+    
+    <!-- Linhas Cruzadas Internas de Precisão Estética -->
+    <line x1="-30" y1="0" x2="30" y2="0" stroke="url(#goldBeauty)" stroke-width="1" />
+    <line x1="0" y1="-40" x2="0" y2="40" stroke="url(#goldBeauty)" stroke-width="1" />
+    <circle cx="0" cy="0" r="4" fill="url(#goldBeauty)" />
+  </g>
+
+  <!-- Tipografia Principal (Playfair Display Style) -->
+  <text x="200" y="275" font-family="'Playfair Display', Georgia, serif" font-size="28" font-weight="500" fill="url(#goldBeauty)" text-anchor="middle" letter-spacing="8">
+    ÉLÉGANCE
+  </text>
+
+  <line x1="140" y1="298" x2="260" y2="298" stroke="url(#goldBeauty)" stroke-width="1" opacity="0.6" />
+
+  <!-- Subtítulo Retilíneo -->
+  <text x="200" y="318" font-family="'Outfit', sans-serif" font-size="9" font-weight="400" fill="#E4D0B4" text-anchor="middle" letter-spacing="4" opacity="0.9">
+    CLÍNICA DE ESTÉTICA AVANÇADA
+  </text>
+</svg>

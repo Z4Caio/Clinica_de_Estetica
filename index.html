@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Élégance — Clínica de Estética Avançada</title>
+  <meta name="description" content="Élégance — Clínica de estética premium. Harmonização facial, toxina botulínica, bioestimuladores e avaliações tridimensionais personalizadas." />
+
+  <!-- Favicon / Ícone da Marca -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo-nav.svg" />
+
+  <!-- Folha de Estilos CSS Inspirada no BeautyClinic -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Bibliotecas JS Carregadas via CDN: GSAP e ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       1. CABEÇALHO E NAVEGAÇÃO (HEADER GLASSMORPHISM BEAUTYCLINIC)
+       ========================================================================== -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      
+      <!-- Marca / Logo da Barra de Navegação -->
+      <a class="header__brand" href="#inicio" aria-label="Élégance — início">
+        <span class="logo logo--sm">
+          <img src="assets/logo-nav.svg" alt="Logotipo Élégance Clínica Estética" height="42" />
+        </span>
+      </a>
+
+      <!-- Menu Principal de Links -->
+      <nav class="nav" id="nav" aria-label="Navegação Principal">
+        <ul class="nav__list" id="navList">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#procedimentos">Procedimentos</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a href="#localizacao">Localização</a></li>
+        </ul>
+      </nav>
+
+      <!-- Ações do Cabeçalho: Redes Sociais e Botão WhatsApp CTA -->
+      <div class="header__actions">
+        
+        <!-- Redes Sociais com Links com Parâmetros Solicitados -->
+        <ul class="social" aria-label="Redes sociais">
+          <!-- WhatsApp -->
+          <li>
+            <a href="https://wa.me/5524999999999?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20a%20ag%C3%AAncia" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24"><path d="M12.031 2c-5.514 0-9.999 4.486-9.999 10 0 1.762.459 3.479 1.332 5.004l-1.364 4.996 5.114-1.342c1.467.8 3.123 1.22 4.917 1.22 5.515 0 10-4.486 10-10s-4.485-10-10-10zm5.922 14.28c-.247.695-1.442 1.325-1.996 1.393-.509.062-1.171.092-3.774-.984-2.6-1.077-4.275-3.738-4.404-3.911-.129-.174-1.054-1.403-1.054-2.677 0-1.274.667-1.9 1.01-2.128.247-.164.538-.205.719-.205.181 0 .362.002.518.01.164.009.388-.063.606.46.229.548.784 1.91.853 2.05.069.141.115.306.023.491-.092.186-.138.3-.275.462-.138.163-.292.366-.418.491-.141.139-.289.292-.124.574.164.282.73 1.205 1.564 1.948 1.072.956 1.976 1.252 2.257 1.391.282.14.448.117.614-.075.166-.192.712-.83.901-1.113.189-.283.378-.235.636-.14.258.095 1.636.771 1.916.911.28.14.467.21.536.326.069.117.069.674-.178 1.369z"/></svg>
+            </a>
+          </li>
+          <!-- Instagram -->
+          <li>
+            <a href="https://wa.me/5524999999999?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20a%20ag%C3%AAncia" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+          </li>
+          <!-- Facebook -->
+          <li>
+            <a href="https://wa.me/5524999999999?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20a%20ag%C3%AAncia" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.5 5H18V0h-3.808C10.592 0 9 1.583 9 4.615V8z"/></svg>
+            </a>
+          </li>
+        </ul>
+
+        <!-- Botão CTA no Cabeçalho -->
+        <a class="btn btn--header" href="https://wa.me/5524999999999?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20a%20ag%C3%AAncia" target="_blank" rel="noopener noreferrer">
+          WhatsApp
+        </a>
+
+        <!-- Botão Menu Hambúrguer (Mobile) -->
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir Navegação">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       2. HERO SECTION (FUNDO BACKGROUND.WEBP + QUADRO RETILÍNEO COM LOGO)
+       ========================================================================== -->
+  <section class="hero" id="inicio">
+    <div class="hero__veil"></div>
+
+    <div class="hero__content">
+      
+      <!-- Moldura Retangular Sem Bordas Arredondadas com Logo Transparente -->
+      <div class="logo--hero-frame" id="hero-logo">
+        <img src="assets/logo.svg" alt="Logotipo Élégance Clínica de Estética" width="300" height="300" />
+      </div>
+
+      <!-- Botão CTA Principal da Página logo abaixo da Logo -->
+      <a class="btn btn--hero btn--gold" href="https://wa.me/5524999999999?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20os%20procedimentos" target="_blank" rel="noopener noreferrer" id="hero-cta">
+        Chamar WhatsApp
+      </a>
+
+    </div>
+
+    <!-- Indicador de Scroll para Baixo -->
+    <div class="scroll-hint">
+      <div class="scroll-hint__line"></div>
+      <span>Role para explorar</span>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       3. SEÇÃO 2: SOBRE A CLÍNICA (LAYOUT E VALORES DO BEAUTYCLINIC)
+       ========================================================================== -->
+  <section class="about" id="sobre">
+    <div class="about__grid">
+      
+      <div class="about__text">
+        <p class="eyebrow">Sobre a Clínica</p>
+        
+        <h2 class="about__title">
+          Beleza com <br />
+          <em>presença e</em> <br />
+          naturalidade.
+        </h2>
+
+        <div class="about__copy">
+          <p>
+            Acreditamos que a verdadeira estética não transforma quem você é, mas realça a sua versão mais autêntica e radiante. Com protocolos personalizados, combinamos ciência médica de alta precisão com sensibilidade artística.
+          </p>
+        </div>
+
+        <!-- Lista de Valores/Diferenciais com Linhas Finas Divisórias -->
+        <ul class="about__values">
+          <li>
+            <span>01</span>
+            Atendimento Exclusivo e Avaliação Facial 3D
+          </li>
+          <li>
+            <span>02</span>
+            Corpo Médico Especializado e Certificado Internacionalmente
+          </li>
+          <li>
+            <span>03</span>
+            Produtos Premium e Tecnologias de Última Geração
+          </li>
+        </ul>
+      </div>
+
+      <!-- Coluna Direita: Foto da Clínica + Widget de Horário Posicionado Abaixo -->
+      <div class="about__media-col">
+        <!-- Moldura Retangular da Imagem -->
+        <figure class="about__frame">
+          <img src="assets/clinic_about.jpg" alt="Ambiente sofisticado da Clínica Élégance" width="600" height="800" loading="lazy" />
+        </figure>
+
+        <!-- ========== Widget de Horário Sofisticado ========== -->
+        <div class="hours-widget" id="hoursWidget">
+          <div class="hours-widget__header">
+            <h3 class="hours-widget__title">Horário de Atendimento</h3>
+            <div class="hours-widget__badge" id="hoursBadge">
+              <span class="status-dot"></span>
+              <span id="hoursStatusText">Verificando...</span>
+            </div>
+          </div>
+
+          <ul class="hours-widget__list">
+            <li data-day="1"><span>Segunda-feira</span><span>08:00 — 20:00</span></li>
+            <li data-day="2"><span>Terça-feira</span><span>08:00 — 20:00</span></li>
+            <li data-day="3"><span>Quarta-feira</span><span>08:00 — 20:00</span></li>
+            <li data-day="4"><span>Quinta-feira</span><span>08:00 — 20:00</span></li>
+            <li data-day="5"><span>Sexta-feira</span><span>08:00 — 18:00</span></li>
+            <li data-day="6"><span>Sábado</span><span>08:00 — 13:00</span></li>
+            <li data-day="0"><span>Domingo</span><span>Sem atendimento</span></li>
+          </ul>
+
+          <p class="hours-widget__today" id="hoursToday"></p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ==========================================================================
+       4. SEÇÃO 3: PROCEDIMENTOS (MAPEAMENTO FACIAL COM BUSTOS INTERATIVOS 2D)
+       ========================================================================== -->
+  <section class="procedures" id="procedimentos">
+    <!-- Fundo Escurecido com Blur e Efeito Luxo -->
+    <div class="procedures__bg"></div>
+
+    <div class="procedures__container">
+      
+      <!-- Cabeçalho da Seção -->
+      <div class="procedures__intro">
+        <p class="eyebrow eyebrow--light">Mapeamento Facial Interativo</p>
+        <h2>Nossos Procedimentos</h2>
+      </div>
+
+      <!-- Seletor de Sexo (Feminino / Masculino) -->
+      <div class="bust-gender-selector" role="tablist" aria-label="Selecione o sexo">
+        <button class="gender-btn active" id="btnGenderFemale" data-gender="female" role="tab" aria-selected="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2a6 6 0 0 0-6 6c0 2.97 2.16 5.43 5 5.91V17H9v2h2v3h2v-3h2v-2h-2v-3.09c2.84-.48 5-2.94 5-5.91a6 6 0 0 0-6-6zm0 10a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/></svg>
+          Feminino
+        </button>
+        <button class="gender-btn" id="btnGenderMale" data-gender="male" role="tab" aria-selected="false">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20 4v6h-2V7.41l-3.95 3.95A6 6 0 1 1 12.64 10l3.95-3.95H14V4h6zm-8 14a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/></svg>
+          Masculino
+        </button>
+      </div>
+
+      <!-- Mensagem Flutuante Acima da Cabeça -->
+      <div class="bust-head-prompt">
+        <span id="headPromptText">Clique em um ponto para descobrir os procedimentos</span>
+      </div>
+
+      <!-- Palco Interativo do Busto -->
+      <div class="bust-stage" id="bustStage">
+        
+        <!-- Seta de Rotação Esquerda (Perfil) -->
+        <button class="bust-rotate-btn bust-rotate-btn--prev" id="btnRotatePrev" aria-label="Rotacionar busto para a esquerda">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 19l-7-7 7-7"/></svg>
+          <span class="btn-rotate-tooltip">Rotacionar Busto</span>
+        </button>
+
+        <!-- Moldura da Imagem do Busto (Escala Ampliada) -->
+        <div class="bust-viewport" id="bustViewport">
+          <!-- Bustos Femininos -->
+          <img id="bustFemaleFront" class="bust-img active" src="assets/bustoMulher_Frente.webp" alt="Busto Feminino — Visão Frontal" />
+          <img id="bustFemaleSide" class="bust-img" src="assets/bustoMulher_Lado.webp" alt="Busto Feminino — Visão Perfil" />
+          
+          <!-- Bustos Masculinos -->
+          <img id="bustMaleFront" class="bust-img" src="assets/bustoHomem_Frente.webp" alt="Busto Masculino — Visão Frontal" />
+          <img id="bustMaleSide" class="bust-img" src="assets/bustoHomem_Lado.webp" alt="Busto Masculino — Visão Perfil" />
+
+          <!-- Camada de Hotspots Interativos (Pontos Pequenos e Discretos) -->
+          <div class="bust-hotspots" id="bustHotspots">
+            
+            <!-- ==================== FEMININO - FRONTAL ==================== -->
+            <div class="bust-pin active" data-gender="female" data-view="front" data-id="botox" style="top: 26%; left: 50%;">
+              <div class="bust-pin__dot"></div>
+              <span class="bust-pin__tooltip">Testa — Toxina Botulínica</span>
+            </div>
+
+            <div class="bust-pin active" data-gender="female" data-view="front" data-id="olheiras" style="top: 39%; left: 43%;">
+              <div class="bust-pin__dot"></div>
+              <span class="bust-pin__tooltip">Periocular — Preenchimento de Olheiras</span>
+            </div>
+
+            <div class="bust-pin active" data-gender="female" data-view="front" data-id="bioestimulador" style="top: 47%; left: 61%;">
+              <div class="bust-pin__dot"></div>
+              <span class="bust-pin__tooltip">Maçãs &amp; Bochechas — Bioestimuladores</span>
+            </div>
+
+            <div class="bust-pin active" data-gender="female" data-view="front" data-id="labios" style="top: 57%; left: 50%;">
+              <div class="bust-pin__dot"></div>
+              <span class="bust-pin__tooltip">Lábios — Preenchimento Labial</span>
+            </div>
+
+            <div class="bust-pin active" data-gender="female" data-view="front" data-id="harmonizacao" style="top: 66%; left: 50%;">
+              <div class="bust-pin__dot"></div>
+              <span class="bust-pin__tooltip">Queixo &amp; Mento — Harmonização Facial</span>
+            </div>
+
+            <!-- ==================== FEMININO - PERFIL (LADO) ==================== -->
+            <div class="bust-pin" data-gender="female" data-view="side" data-id="botox" style="top: 29%; left: 56%;">
+              <div class="bust-pin__dot"></div>
+              <span class="bust-pin__tooltip">Testa — Toxina Botulínica</span>
+            </div>
+
+            <div class="bust-pin" data-gender="female" data-view="side" data-id="morpheus" style="top: 46%; left: 63%;">
+              <div class="bust-pin__dot"></div>
+              <span class="bust-pin__tooltip">Médio Rosto — Morpheus (Microagulhamento RF)</span>
+            </div>
+
+            <div class="bust-pin" data-gender="female" data-view="side" data-id="bioestimulador" style="top: 49%; left: 47%;">
+              <div class="bust-pin__dot"></div>
+              <span class="bust-pin__tooltip">Bochechas — Bioestimuladores</span>
+            </div>
+
+            <div class="bust-pin" data-gender="female" data-view="side" data-id="mandibula" style="top: 62%; left: 41%;">
+              <div class="bust-pin__dot"></div>
+              <span class="bust-pin__tooltip">Mandíbula — Preenchimento Jawline</span>
+            </div>
+
+            <div class="bust-pin" data-gender="female" data-view="side" data-id="papada" style="top: 70%; left: 53%;">
+              <div class="bust-pin__dot"></div>
+              <span class="bust-pin__tooltip">Pescoço — Lipo Enzimática de Papada</span>
+            </div>
+
+            <!-- ==================== MASCULINO - FRONTAL ==================== -->
+            <div class="bust-pin" data-gender="male" data-view="front" data-id="botox" style="top: 27%; left: 50%;">
+              <div class="bust-pin__dot"></div>
+              <span class="bust-pin__tooltip">Testa — Toxina Botulínica</span>
+            </div>
+
+            <div class="bust-pin" data-gender="male" data-view="front" data-id="olheiras" style="top: 38%; left: 44%;">
+              <div class="bust-pin__dot"></div>
+              <span class="bust-pin__tooltip">Periocular — Preenchimento de Olheiras</span>
+            </div>
+
+            <div class="bust-pin" data-gender="male" data-view="front" data-id="harmonizacao" style="top: 48%; left: 59%;">
+              <div class="bust-pin__dot"></div>
+              <span class="bust-pin__tooltip">Estruturação — Harmonização Facial</span>
+            </div>
+
+            <div class="bust-pin" data-gender="male" data-view="front" data-id="labios" style="top: 56%; left: 50%;">
+              <div class="bust-pin__dot"></div>
+              <span class="bust-pin__tooltip">Lábios — Preenchimento Labial</span>
+            </div>
+
+            <div class="bust-pin" data-gender="male" data-view="front" data-id="mandibula" style="top: 64%; left: 34%;">
+              <div class="bust-pin__dot"></div>
+              <span class="bust-pin__tooltip">Ângulo Mandibular — Preenchimento</span>
+            </div>
+
+            <!-- ==================== MASCULINO - PERFIL (LADO) ==================== -->
+            <div class="bust-pin" data-gender="male" data-view="side" data-id="botox" style="top: 28%; left: 57%;">
+              <div class="bust-pin__dot"></div>
+              <span class="bust-pin__tooltip">Testa — Toxina Botulínica</span>
+            </div>
+
+            <div class="bust-pin" data-gender="male" data-view="side" data-id="morpheus" style="top: 44%; left: 65%;">
+              <div class="bust-pin__dot"></div>
+              <span class="bust-pin__tooltip">Médio Rosto — Morpheus RF</span>
+            </div>
+
+            <div class="bust-pin" data-gender="male" data-view="side" data-id="bioestimulador" style="top: 49%; left: 46%;">
+              <div class="bust-pin__dot"></div>
+              <span class="bust-pin__tooltip">Bochechas — Bioestimuladores</span>
+            </div>
+
+            <div class="bust-pin" data-gender="male" data-view="side" data-id="mandibula" style="top: 61%; left: 39%;">
+              <div class="bust-pin__dot"></div>
+              <span class="bust-pin__tooltip">Contorno Jawline — Preenchimento</span>
+            </div>
+
+            <div class="bust-pin" data-gender="male" data-view="side" data-id="papada" style="top: 71%; left: 52%;">
+              <div class="bust-pin__dot"></div>
+              <span class="bust-pin__tooltip">Pescoço — Lipo Enzimática de Papada</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Seta de Rotação Direita (Perfil) -->
+        <button class="bust-rotate-btn bust-rotate-btn--next" id="btnRotateNext" aria-label="Rotacionar busto para a direita">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg>
+          <span class="btn-rotate-tooltip">Rotacionar Busto</span>
+        </button>
+
+      </div>
+
+      <!-- Indicador do Ângulo Atual de Rotação (Vista Frontal <-> Vista Perfil) -->
+      <div class="bust-view-indicator">
+        <button class="view-toggle-btn active" id="btnViewFront" data-view="front">Vista Frontal</button>
+        <div class="view-toggle-divider"></div>
+        <button class="view-toggle-btn" id="btnViewSide" data-view="side">Vista Perfil (Lado)</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       MODAL POP-UP RETILÍNEO (ABERTO AO CLICAR EM UM CARD)
+       ========================================================================== -->
+  <div class="modal-overlay" id="procedureModal" aria-hidden="true" role="dialog">
+    <div class="modal-card">
+      
+      <!-- Botão Fechar (X) -->
+      <button class="modal-close" id="modalCloseBtn" aria-label="Fechar Modal">&times;</button>
+
+      <!-- Conteúdo do Modal Pop-up -->
+      <span class="modal-badge" id="modalBadge">Procedimento Facial</span>
+      <h2 class="modal-title" id="modalTitle">Título do Tratamento</h2>
+      <p class="modal-desc" id="modalDesc">Descrição técnica e artística detalhada do procedimento.</p>
+
+      <!-- Ficha Técnica -->
+      <div class="modal-grid">
+        <div class="modal-grid-item">
+          <label>Duração Média</label>
+          <span id="modalDuration">45 minutos</span>
+        </div>
+        <div class="modal-grid-item">
+          <label>Durabilidade Estimada</label>
+          <span id="modalDurability">12 a 18 meses</span>
+        </div>
+        <div class="modal-grid-item">
+          <label>Anestesia</label>
+          <span id="modalAnesthesia">Tópica / Local</span>
+        </div>
+        <div class="modal-grid-item">
+          <label>Recuperação</label>
+          <span id="modalRecovery">Imediata</span>
+        </div>
+      </div>
+
+      <!-- Ações: WhatsApp + Botão Voltar Solicitado -->
+      <div class="modal-actions">
+        <a class="btn btn--gold" href="https://wa.me/5524999999999?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta" target="_blank" rel="noopener noreferrer" id="modalCtaBtn">
+          Agendar pelo WhatsApp
+        </a>
+        <button class="btn btn--light" id="modalBackBtn">Voltar</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       5. SEÇÃO 4: ENTRE EM CONTATO (CTA DE AUTOESTIMA BEAUTYCLINIC)
+       ========================================================================== -->
+  <section class="contact" id="contato">
+    <div class="contact__inner">
+      <p class="eyebrow">Entre em Contato</p>
+      
+      <h2>Se você quer melhorar sua autoestima, entre em contato conosco.</h2>
+      
+      <p class="contact__lead">
+        Agende uma avaliação tridimensional exclusiva com nossos especialistas e descubra o protocolo ideal para valorizar seus traços únicos.
+      </p>
+
+      <!-- Botão CTA Principal da Página -->
+      <a class="btn btn--light" href="https://wa.me/5524999999999?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20a%20ag%C3%AAncia" target="_blank" rel="noopener noreferrer">
+        Chamar WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6. SEÇÃO 5: LOCALIZAÇÃO (MAPA COM FILTRO SEPIA/GRAYSCALE)
+       ========================================================================== -->
+  <section class="location" id="localizacao">
+    <div class="location__grid">
+      
+      <div class="location__info">
+        <p class="eyebrow">Onde Estamos</p>
+        <h2>Nossa Localização</h2>
+        
+        <address>
+          Av. Brigadeiro Faria Lima, 3477 - Itaim Bibi<br />
+          São Paulo — SP, 04538-133
+        </address>
+
+        <p>
+          Telefone / WhatsApp: (24) 99999-9999<br />
+          Atendimento: Segunda a Sexta: 08h às 20h | Sábados: 09h às 14h
+        </p>
+      </div>
+
+      <!-- Moldura Retangular do Mapa com Filtro Elegante BeautyClinic -->
+      <div class="location__map">
+        <iframe 
+          title="Mapa de Localização da Clínica Élégance"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.497537678589!2d-46.68532452378873!3d-23.58647597878345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5743a129999d%3A0x6b403487c8a6669!2sAv.%20Brigadeiro%20Faria%20Lima%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
+          allowfullscreen=""
+          loading="lazy">
+        </iframe>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       7. RODAPÉ (FOOTER MINIMALISTA BEAUTYCLINIC)
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p>© 2026 - Clínica de Estética - Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Script JavaScript Principal -->
+  <script src="js/main.js"></script>
+</body>
+</html>
