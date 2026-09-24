@@ -37,6 +37,7 @@
           <li><a href="#inicio">Início</a></li>
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#procedimentos">Procedimentos</a></li>
+          <li><a href="#diferenciais">Diferenciais</a></li>
           <li><a href="#contato">Contato</a></li>
           <li><a href="#localizacao">Localização</a></li>
         </ul>
@@ -373,7 +374,19 @@
       <!-- Conteúdo do Modal Pop-up -->
       <span class="modal-badge" id="modalBadge">Procedimento Facial</span>
       <h2 class="modal-title" id="modalTitle">Título do Tratamento</h2>
-      <p class="modal-desc" id="modalDesc">Descrição técnica e artística detalhada do procedimento.</p>
+      <p class="modal-desc" id="modalDesc">Descrição simplificada e didática do procedimento.</p>
+
+      <!-- Blocos Educativos: Indicação e Benefício na Autoestima -->
+      <div class="modal-info-blocks">
+        <div class="modal-info-block">
+          <label>Para quem é indicado</label>
+          <p id="modalIndication">Indicação clara e acolhedora para o paciente ideal.</p>
+        </div>
+        <div class="modal-info-block">
+          <label>Transformação na sua vida</label>
+          <p id="modalBenefit">Impacto positivo na autoestima e bem-estar.</p>
+        </div>
+      </div>
 
       <!-- Ficha Técnica -->
       <div class="modal-grid">
@@ -395,6 +408,15 @@
         </div>
       </div>
 
+      <!-- Barra de Navegação entre Múltiplos Procedimentos na mesma Área -->
+      <div class="modal-pagination" id="modalPagination" style="display: none;">
+        <button class="modal-pagination__btn" id="modalProcNextBtn" type="button">
+          <span id="modalPaginationLabel">Passe para ver outros procedimentos possíveis nesta área</span>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <span class="modal-pagination__counter" id="modalProcCounter">1 / 2</span>
+      </div>
+
       <!-- Ações: WhatsApp + Botão Voltar Solicitado -->
       <div class="modal-actions">
         <a class="btn btn--gold" href="https://wa.me/5524999999999?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta" target="_blank" rel="noopener noreferrer" id="modalCtaBtn">
@@ -407,7 +429,63 @@
   </div>
 
   <!-- ==========================================================================
-       5. SEÇÃO 4: ENTRE EM CONTATO (CTA DE AUTOESTIMA BEAUTYCLINIC)
+       5. SEÇÃO 4: DIFERENCIAIS DA CLÍNICA (CARDS 2x2 RETILÍNEOS)
+       ========================================================================== -->
+  <section class="features" id="diferenciais">
+    <div class="features__inner">
+      <div class="features__intro">
+        <p class="eyebrow">Por que escolher a Élégance</p>
+        <h2>Nossos Diferenciais</h2>
+        <p class="features__lead">
+          Combinamos excelência médica, sensibilidade estética e um acompanhamento contínuo para garantir resultados autênticos com total tranquilidade.
+        </p>
+      </div>
+
+      <!-- Grid 2x2 com 4 Diferenciais -->
+      <div class="features__grid">
+        
+        <!-- Diferencial 01 -->
+        <div class="feature-card">
+          <span class="feature-card__num">01</span>
+          <h3>Acompanhamento Pós-Procedimento Ativo</h3>
+          <p>
+            Não encerramos seu atendimento na saída da clínica. Mantemos contato ativo diário nos primeiros dias para acompanhar sua recuperação, esclarecer dúvidas e assegurar o melhor resultado.
+          </p>
+        </div>
+
+        <!-- Diferencial 02 -->
+        <div class="feature-card">
+          <span class="feature-card__num">02</span>
+          <h3>Avaliação Visagista Personalizada</h3>
+          <p>
+            Analisamos suas proporções faciais e a harmonia dos seus traços únicos antes de propor qualquer protocolo, evitando padronizações e preservando sua essência natural.
+          </p>
+        </div>
+
+        <!-- Diferencial 03 -->
+        <div class="feature-card">
+          <span class="feature-card__num">03</span>
+          <h3>Produtos de Pureza Farmacêutica Premium</h3>
+          <p>
+            Trabalhamos exclusivamente com as marcas líderes mundiais em ácido hialurônico, toxina botulínica e bioestimuladores com aprovação das mais rigorosas agências de saúde.
+          </p>
+        </div>
+
+        <!-- Diferencial 04 -->
+        <div class="feature-card">
+          <span class="feature-card__num">04</span>
+          <h3>Privacidade Absoluta e Conforto</h3>
+          <p>
+            Salas individuais com conceito boutique, atendimento pontual com horário exclusivo e ambiente projetado para uma experiência acolhedora e relaxante.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6. SEÇÃO 5: ENTRE EM CONTATO (CTA DE AUTOESTIMA BEAUTYCLINIC)
        ========================================================================== -->
   <section class="contact" id="contato">
     <div class="contact__inner">
