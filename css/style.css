@@ -34,6 +34,8 @@
    2. VARIÁVEIS DE DESIGN TOKENS (EXATAS DO BEAUTYCLINIC)
    -------------------------------------------------------------------------- */
 :root {
+  color-scheme: light;
+  supported-color-schemes: light;
   --color-primary: #c4a07a;
   --color-secondary: #8b6a4a;
   --color-background: #f4ece3;
@@ -74,11 +76,15 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  color-scheme: light !important;
+  supported-color-schemes: light;
 }
 
 html, body {
   margin: 0;
   padding: 0;
+  color-scheme: light !important;
+  forced-color-adjust: none;
 }
 
 body {
@@ -90,6 +96,16 @@ body {
   letter-spacing: 0.01em;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Prevenir qualquer alteração forçada por navegadores/dispositivos em Modo Escuro */
+@media (prefers-color-scheme: dark) {
+  :root, html, body {
+    color-scheme: light !important;
+    supported-color-schemes: light !important;
+    background-color: var(--color-background) !important;
+    color: var(--color-text) !important;
+  }
 }
 
 img, svg, canvas {
